@@ -1,28 +1,50 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
+@import url(https://fonts.googleapis.com/css?family=Allerta);
 
+#logo-type{ font-size: 17px; font-family: Allerta !important; padding-left:25px;}
+#logo{  
+  position: absolute;
+  z-index: 50;
+  top:1px;
+  left:5px;   
+ }
+.navbar{padding:0 10px;margin-bottom: 0; display: inline-block;
+
+}
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 0px;
+}
 * {
   margin: 0px;
   padding: 0px;
-  font: 16px 'Source Sans Pro', sans-serif;
+  font: 15px Allerta,'Source Sans Pro', sans-serif;
   border: none;
   box-sizing: border-box;
 }
+
 
 html, body {
   background: #2E706C;
   text-align: center;
   width: 100%;
   height: 100%;
+  min-height: 600px;
 }
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.jumbotron{background-color: #007196!important; margin-top: 40px;}
+.background{height:70vh;background-position:center;background-repeat:no-repeat;background-image: url(../src/bg.png); background-color: #ff5588;}
+
 
 html {
   display: table;
 }
 
-body {
-  display: table-cell;
-  vertical-align: middle;
-}
+
 
 #quiz {
   margin: -44px 50px 0px;
