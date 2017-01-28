@@ -9,7 +9,8 @@
 
 
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/bootstrap-yeti-min.css">
+  <link rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap-yeti-min.css">
+  <link rel="stylesheet" href="css/bootstrap-notifications-master/bootstrap-notifications-master/dist/stylesheets/bootstrap-notifications.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
@@ -26,7 +27,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-      <a class="navbar-brand" href="#"><img id="logo"src="src/logo.png" width="43px" height="43px"><span id="logo-type">Brain Master</span></a>
+      <a class="navbar-brand" href="index.html"><img id="logo"src="src/logo.png" width="43px" height="43px"><span id="logo-type">Brain Master</span></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -38,12 +39,181 @@
         <li><a href="quiz.html">Quiz</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="fa fa-user-plus"></span></a></li>
-        <li><a href="#"><span class="fa fa-envelope-o"></span></a></li>
-        <li><a href="#"><span class="fa fa-globe"></span></a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Username <span class="fa fa-caret-down"></span></a>
-          <ul class="dropdown-menu">
+        <li  role="presentation" class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"><span class="badge">+1</span></a>
+            <div class="dropdown-container">
+            <div class="dropdown-toolbar">
+                <div class="dropdown-toolbar-actions">
+                  <a href="#"><i class="glyphicon glyphicon-search"></i> View All</a>
+                </div>
+                <h3 class="dropdown-toolbar-title">Recent (1)</h3>
+              </div><!-- /dropdown-toolbar -->
+
+              <ul class="dropdown-menu notifications">
+                <li class="notification">
+                    <div class="media">
+                      <div class="media-left">
+                        <div class="media-object">
+                          <img data-src="holder.js/50x50?bg=cccccc" class="img-circle" alt="50x50" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2250%22%20height%3D%2250%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2050%2050%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_159e5a15b98%20text%20%7B%20fill%3A%23919191%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_159e5a15b98%22%3E%3Crect%20width%3D%2250%22%20height%3D%2250%22%20fill%3D%22%23cccccc%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%227.5%22%20y%3D%2229.5%22%3E50x50%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="width: 50px; height: 50px;">
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <strong class="notification-title"><a href="#">James Bond</a> resolved <a href="#">B-007 - Desolve Spectre organization</a></strong>
+
+                        <div class="notification-meta">
+                          <small class="timestamp">1. 9. 2015, 08:00</small>
+                        </div>
+
+                      </div>
+                    </div>
+                </li>
+              </ul>
+            </div>
+        </li> 
+        
+        <li  role="presentation" class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-comment"><span class="badge">+3</span></a>
+            <div class="dropdown-container">
+            <div class="dropdown-toolbar">
+                <div class="dropdown-toolbar-actions">
+                  <a href="#"><i class="glyphicon glyphicon-search"></i> View All</a>
+                </div>
+                <h3 class="dropdown-toolbar-title">Recent (3)</h3>
+              </div><!-- /dropdown-toolbar -->
+
+              <ul class="dropdown-menu notifications">
+                <li class="notification">
+                    <div class="media">
+                      <div class="media-left">
+                        <div class="media-object">
+                          <img data-src="holder.js/50x50?bg=cccccc" class="img-circle" alt="50x50" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2250%22%20height%3D%2250%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2050%2050%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_159e5a15b8e%20text%20%7B%20fill%3A%23919191%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_159e5a15b8e%22%3E%3Crect%20width%3D%2250%22%20height%3D%2250%22%20fill%3D%22%23cccccc%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%227.5%22%20y%3D%2229.5%22%3E50x50%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="width: 50px; height: 50px;">
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <strong class="notification-title"><a href="#">Dave Lister</a> commented on <a href="#">DWARF-13 - Maintenance</a></strong>
+                        <p class="notification-desc">I totally don't wanna do it. Rimmer can do it.</p>
+
+                        <div class="notification-meta">
+                          <small class="timestamp">27. 11. 2015, 15:00</small>
+                        </div>
+                      </div>
+                    </div>
+                </li>
+
+                <li class="notification">
+                    <div class="media">
+                      <div class="media-left">
+                        <div class="media-object">
+                          <img data-src="holder.js/50x50?bg=cccccc" class="img-circle" alt="50x50" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2250%22%20height%3D%2250%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2050%2050%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_159e5a15b93%20text%20%7B%20fill%3A%23919191%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_159e5a15b93%22%3E%3Crect%20width%3D%2250%22%20height%3D%2250%22%20fill%3D%22%23cccccc%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%227.5%22%20y%3D%2229.5%22%3E50x50%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="width: 50px; height: 50px;">
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <strong class="notification-title"><a href="#">Nikola Tesla</a> resolved <a href="#">T-14 - Awesome stuff</a></strong>
+
+                        <p class="notification-desc">Resolution: Fixed, Work log: 4h</p>
+
+                        <div class="notification-meta">
+                          <small class="timestamp">27. 10. 2015, 08:00</small>
+                        </div>
+
+                      </div>
+                    </div>
+                </li>
+
+                <li class="notification">
+                    <div class="media">
+                      <div class="media-left">
+                        <div class="media-object">
+                          <img data-src="holder.js/50x50?bg=cccccc" class="img-circle" alt="50x50" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2250%22%20height%3D%2250%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2050%2050%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_159e5a15b98%20text%20%7B%20fill%3A%23919191%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_159e5a15b98%22%3E%3Crect%20width%3D%2250%22%20height%3D%2250%22%20fill%3D%22%23cccccc%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%227.5%22%20y%3D%2229.5%22%3E50x50%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="width: 50px; height: 50px;">
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <strong class="notification-title"><a href="#">James Bond</a> resolved <a href="#">B-007 - Desolve Spectre organization</a></strong>
+
+                        <div class="notification-meta">
+                          <small class="timestamp">1. 9. 2015, 08:00</small>
+                        </div>
+
+                      </div>
+                    </div>
+                </li>
+              </ul>
+            </div>
+        </li> 
+        
+        <li  role="presentation" class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-bell"><span class="badge">+11</span></a>
+            <div class="dropdown-container">
+            <div class="dropdown-toolbar">
+                <div class="dropdown-toolbar-actions">
+                  <a href="#"><i class="glyphicon glyphicon-search"></i> View All</a>
+                </div>
+                <h3 class="dropdown-toolbar-title">Recent (11)</h3>
+              </div><!-- /dropdown-toolbar -->
+
+              <ul class="dropdown-menu notifications">
+                <li class="notification">
+                    <div class="media">
+                      <div class="media-left">
+                        <div class="media-object">
+                          <img data-src="holder.js/50x50?bg=cccccc" class="img-circle" alt="50x50" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2250%22%20height%3D%2250%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2050%2050%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_159e5a15b8e%20text%20%7B%20fill%3A%23919191%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_159e5a15b8e%22%3E%3Crect%20width%3D%2250%22%20height%3D%2250%22%20fill%3D%22%23cccccc%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%227.5%22%20y%3D%2229.5%22%3E50x50%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="width: 50px; height: 50px;">
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <strong class="notification-title"><a href="#">Dave Lister</a> commented on <a href="#">DWARF-13 - Maintenance</a></strong>
+                        <p class="notification-desc">I totally don't wanna do it. Rimmer can do it.</p>
+
+                        <div class="notification-meta">
+                          <small class="timestamp">27. 11. 2015, 15:00</small>
+                        </div>
+                      </div>
+                    </div>
+                </li>
+
+                <li class="notification">
+                    <div class="media">
+                      <div class="media-left">
+                        <div class="media-object">
+                          <img data-src="holder.js/50x50?bg=cccccc" class="img-circle" alt="50x50" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2250%22%20height%3D%2250%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2050%2050%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_159e5a15b93%20text%20%7B%20fill%3A%23919191%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_159e5a15b93%22%3E%3Crect%20width%3D%2250%22%20height%3D%2250%22%20fill%3D%22%23cccccc%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%227.5%22%20y%3D%2229.5%22%3E50x50%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="width: 50px; height: 50px;">
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <strong class="notification-title"><a href="#">Nikola Tesla</a> resolved <a href="#">T-14 - Awesome stuff</a></strong>
+
+                        <p class="notification-desc">Resolution: Fixed, Work log: 4h</p>
+
+                        <div class="notification-meta">
+                          <small class="timestamp">27. 10. 2015, 08:00</small>
+                        </div>
+
+                      </div>
+                    </div>
+                </li>
+
+                <li class="notification">
+                    <div class="media">
+                      <div class="media-left">
+                        <div class="media-object">
+                          <img data-src="holder.js/50x50?bg=cccccc" class="img-circle" alt="50x50" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2250%22%20height%3D%2250%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2050%2050%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_159e5a15b98%20text%20%7B%20fill%3A%23919191%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_159e5a15b98%22%3E%3Crect%20width%3D%2250%22%20height%3D%2250%22%20fill%3D%22%23cccccc%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%227.5%22%20y%3D%2229.5%22%3E50x50%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="width: 50px; height: 50px;">
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <strong class="notification-title"><a href="#">James Bond</a> resolved <a href="#">B-007 - Desolve Spectre organization</a></strong>
+
+                        <div class="notification-meta">
+                          <small class="timestamp">1. 9. 2015, 08:00</small>
+                        </div>
+
+                      </div>
+                    </div>
+                </li>
+              </ul>
+            </div>
+        </li>
+           
+        <li  class="dropdown">
+          <a href="#"  class="dropdown-toggle" data-toggle="dropdown">Username <span class="fa fa-caret-down"></span></a>
+          <ul id="user-dropdown" class="dropdown-menu">
             <li><a href="#"><span class="fa fa-user-circle-o"></span> Profile</a></li>
             <li><a href="#"><span class="fa fa-gear"></span> Settings</a></li>
             <li><a href="#"><span class="fa fa-power-off"></span> Logout</a></li>
@@ -57,11 +227,13 @@
 
 <div class="jumbotron background">
   <div class="container">
-    <h1>Brain Master</h1>
+    <div class="transparent-box">
+          <h1>Brain Master</h1>
     <p>Let your brain work</p>
     <p>
       <a class="btn btn-primary btn-lg">Learn more</a>
     </p>
+    </div>
   </div>
 </div>
 <div class="container">

@@ -1,6 +1,19 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
 @import url(https://fonts.googleapis.com/css?family=Allerta);
 
+#user-dropdown {
+  font-size: 14px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+
+  }
+
+#user-dropdown li a{   color:#333333 !important; text-align:left;  padding:10px 15px !important;}
 #logo-type{ font-size: 17px; font-family: Allerta !important; padding-left:25px;}
 #logo{  
   position: absolute;
@@ -9,12 +22,14 @@
   left:5px;   
  }
 .navbar{padding:0 10px;margin-bottom: 0; display: inline-block;
-
 }
+.transparent-box{color:white;}
+
 /* Let's get this party started */
 ::-webkit-scrollbar {
     width: 0px;
 }
+.badge{background-color:#fa3e3e !important;}
 * {
   margin: 0px;
   padding: 0px;
