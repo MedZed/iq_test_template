@@ -238,7 +238,7 @@
 		<p ng-class="{'alert-success': timer < 20, 'alert-warning': timer >= 20 && timer < 40, 'alert-danger': timer >= 40 && timer < 60 }" ng-show="playingGame()" class="alert h4 timer" role="alert">{{timer}}</p>	
 		<p class="form-group" ng-class="{'has-error': isIncorrect(), 'has-success': isAnswer() }" ng-show="playingGame()">
 			<label class="control-label center-block text-center h2">{{variables.x}} {{symbol}} {{variables.y}}</label>
-			<input type="number" class="form-control" ng-model="answer" placeholder="Answer" pattern="[0-9]*" inputmode="numeric" />
+			<input type="text" class="form-control" ng-model="answer" placeholder="Answer"  />
 		</p>
 		<p class="h3" ng-show="endGame()">
 			Time is up!</p>
