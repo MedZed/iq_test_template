@@ -1,4 +1,26 @@
+var n = 0;
+var end = 20;
+setTimeout(countDown,1000);
 
+function countDown(){
+   n++;
+   if(n <= end){
+      setTimeout(countDown,1000);
+   }
+   console.log(n);
+   $(".progress-bar").css("width", ((n/end)*100)+"%");
+//    document.getElementById("div_timer").innerHTML = n;
+
+      if (n > end/2){$(".progress-bar").addClass("progress-bar-danger");} 
+      if (n > end/3){$(".progress-bar").addClass("progress-bar-warning");} 
+
+   if (n == end){
+       
+    //    alert ("done")
+    $('#submit-button').click();
+
+} 
+}
 
 
 
@@ -151,6 +173,7 @@ Quiz.prototype.render = function(container) {
     $('#quiz-results-score').html('You got <b>' + score + '/' + self.questions.length + '</b> questions correct.');
     $('#quiz-results').slideDown();
     $('#quiz button').slideUp();
+    $('.progress').slideUp();
   });
   
   // Add a listener on the questions container to listen for user select changes. This is for determining whether we can submit answers or not.
@@ -246,7 +269,7 @@ Question.prototype.render = function(container) {
 // "Main method" which will create all the objects and render the Quiz.
 $(document).ready(function() {
   // Create an instance of the Quiz object
-  var quiz = new Quiz('Addition ');
+  var quiz = new Quiz('Addition | '+all_questions.length+' questions under '+end+' seconds' );
   
   // Create Question objects from all_questions and add them to the Quiz object
   for (var i = 0; i < all_questions.length; i++) {
