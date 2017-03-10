@@ -1,3 +1,26 @@
+var n = 0;
+var end = 20;
+setTimeout(countDown,1000);
+
+function countDown(){
+   n++;
+   if(n <= end){
+      setTimeout(countDown,1000);
+   }
+   console.log(n);
+   $(".progress-bar").css("width", ((n/end)*100)+"%");
+
+      if (n > end/2){$(".progress-bar").addClass("progress-bar-danger");} 
+      if (n > end/3){$(".progress-bar").addClass("progress-bar-warning");} 
+
+   if (n == end){
+       
+    $('#submit-button').click();
+
+} 
+}
+
+
 // Array of all the questions and choices to populate the questions. This might be saved in some JSON file or a database and we would have to read the data in.
 var all_questions = [{
   question_string: "iq_exemple/1/exemple.gif",
@@ -108,6 +131,7 @@ Quiz.prototype.render = function(container) {
     $('#quiz-results-score').html('You got <b>' + score + '/' + self.questions.length + '</b> questions correct.');
     $('#quiz-results').slideDown();
     $('#quiz button').slideUp();
+    $('.progress').slideUp();
   });
   
   // Add a listener on the questions container to listen for user select changes. This is for determining whether we can submit answers or not.

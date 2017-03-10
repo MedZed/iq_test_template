@@ -9,14 +9,12 @@ function countDown(){
    }
    console.log(n);
    $(".progress-bar").css("width", ((n/end)*100)+"%");
-//    document.getElementById("div_timer").innerHTML = n;
 
       if (n > end/2){$(".progress-bar").addClass("progress-bar-danger");} 
       if (n > end/3){$(".progress-bar").addClass("progress-bar-warning");} 
 
    if (n == end){
        
-    //    alert ("done")
     $('#submit-button').click();
 
 } 
@@ -24,42 +22,75 @@ function countDown(){
 
 
 
-function create (){
+function createAdd (){
 var rand ;
 var answer1,answer2,answer3,answer4,question;
 var val1,val2,result;
 
-function r(){
-    rand = Math.floor((Math.random() * 10) + 1); 
-    return rand;
-}
-function r2(){
-    rand = Math.floor((Math.random() * 20) + 1); 
-    return rand;
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-val1 = r();
-val2 = r();
+val1 = getRandomInt(1, 10);
+val2 = getRandomInt(1, 10);
 result = val1+val2;
 
-answer1 = r2();
-answer2 = r2();
-answer3 = r2();
+answer1 = getRandomInt(1, 7);
+answer2 = getRandomInt(8, 15);
+answer3 = getRandomInt(16, 20);
 
 if(answer1 == result || answer1 == answer2 || answer1 == answer3){
-    answer1 = r2();
+    answer1 = getRandomInt(20, 30);
 }
 
 if(answer2 == result || answer2 == answer1 || answer2 == answer3){
-    answer2 = r2();
+    answer2 = getRandomInt(20, 30);
 }
 
 if(answer3 == result || answer3 == answer2 || answer3 == answer1){
-    answer3 = r2();
+    answer3 = getRandomInt(20, 30);
 }
 
 return {
   question_string: "What's "+val1+"+"+val2,
+  choices: {
+    correct: result,
+    wrong: [answer1, answer2, answer3]
+  }
+};
+}
+
+function createSus (){
+var rand ;
+var answer1,answer2,answer3,answer4,question;
+var val1,val2,result;
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+val1 = getRandomInt(1, 10);
+val2 = getRandomInt(1, 10);
+result = val1-val2;
+
+answer1 = getRandomInt(-1, 7);
+answer2 = getRandomInt(-8, 15);
+answer3 = getRandomInt(-16, 20);
+
+if(answer1 == result || answer1 == answer2 || answer1 == answer3){
+    answer1 = getRandomInt(-20, 30);
+}
+
+if(answer2 == result || answer2 == answer1 || answer2 == answer3){
+    answer2 = getRandomInt(-20, 30);
+}
+
+if(answer3 == result || answer3 == answer2 || answer3 == answer1){
+    answer3 = getRandomInt(-20, 30);
+}
+
+return {
+  question_string: "What's "+val1+"-"+val2,
   choices: {
     correct: result,
     wrong: [answer1, answer2, answer3]
@@ -72,7 +103,7 @@ function rep()
    var tab = [];
    for (var i = 0; i < 5; i++)
    {
-      tab.push(create());
+      tab.push(createAdd());
    }
    return  tab;
  }
